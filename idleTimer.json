@@ -1,0 +1,26 @@
+{
+    "name": "Idle Timeout Application",
+    "title": "Idle Timeout Application",
+    "description": "Sets idle session timeout value and message",
+    "services": [
+        "Customizer"
+    ],
+    "state": "enabled",
+    "extensions": [
+        {
+            "name": "Idle Timeout extension",
+            "type": "com.ibm.customizer.ui",
+            "payload": {
+                "include-files": [
+                    "idleTimer.js"
+                ],
+                "include-repo": {
+                    "name": "connections-idle-timeout"
+                }
+            },
+            "path": "global",
+            "application": "Idle Timeout Application",
+            "state": "enabled"
+        }
+    ]
+}
